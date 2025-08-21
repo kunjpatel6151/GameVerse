@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link href="signup.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script>
+    function validateform() {
+      var a = document.forms["login"]["name"].value;
+      var b = document.forms["login"]["email"].value;
+      var c = document.forms["login"]["address"].value;
+      var d = document.forms["login"]["pin"].value;
+      var e = document.forms["login"]["pass"].value;
+      var f = document.forms["login"]["cpass"].value;
+      var g = document.getElementById("check").checked;
+      if (a == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+      if (b == "") {
+        alert("Email must be filled out");
+        return false;
+      }
+      if (c == "") {
+        alert("Address must be filled out");
+        return false;
+      }
+      if (d == "") {
+        alert("Pincode must be filled out");
+        return false;
+      }
+      if (e == "") {
+        alert("Password must be filled out");
+        return false;
+      }
+      if (f == "") {
+        alert("Confirm Password must be filled out");
+        return false;
+      }
+      if (g == false) {
+        alert("Please agree to the terms and conditions");
+        return false;
+      }
+      if (e != f) {
+        alert("Password and Confirm Password must be same");
+        return false;
+      }
+      if (e.length < 6 || f.length < 6) {
+        aletr("Password must be atleast 6 characters");
+      }
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="signup">
+      <div class="logo"></div>
+      <br>
+      <hr>
+      <div class="title">Signup</div>
+      <form action="index.html" method="post" name="login" onsubmit="return validateform()">
+        <div class=" field">Name:
+        </div>
+        <input class="input" type="text" placeholder="user" name="name">
+        <div class="field">Email:</div>
+        <input class="input" type="email" placeholder="email" name="email">
+        <div class="field">Address:</div>
+        <textarea class="input" rows="2" name="address"></textarea>
+        <div class="field">Pincode:</div>
+        <input type="number" class="input" placeholder="pincode" name="pin">
+        <div class="field">Birthdate: <input class="date" type="date" required></div>
+        <div class="field">Password:</div>
+        <input class="input" type="password" placeholder="password" name="pass">
+        <div class="field">Confirm Password:</div>
+        <input class="input" type="password" placeholder="confirm password" name="cpass"">
+        <div class=" text"><input type="checkbox" name="check" id="check"> Agree,Terms and Conditions
+    </div>
+    <button type="submit" class="button">Signup</button>
+    </form>
+  </div>
+  </div>
+</body>
+
+</html>

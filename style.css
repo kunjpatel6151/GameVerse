@@ -1,0 +1,590 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+b {
+  font-weight: 800;
+}
+
+body {
+  /* background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);*/
+  background-color: black;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.plgame a {
+  text-decoration: none;
+  color: black;
+}
+
+.background {
+  height: 600px;
+  width: 1536px;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#cart-container {
+
+  padding: 80px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  top: 330px;
+  margin: 0px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-button {
+  position: relative;
+  top: 345px;
+  left: 40px;
+}
+
+.background2 {
+  height: 275px;
+  width: 1536px;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sologame {
+  height: fit-content;
+  width: 900px;
+  background-color: white;
+  position: absolute;
+  top: 290px;
+  left: 130px;
+  padding: 20px;
+  float: left;
+}
+
+.about {
+  height: fit-content;
+  width: 1250px;
+  position: relative;
+  left: 150px;
+  right: 150px;
+  top: 300px;
+  background-color: #1b1b1b;
+  border: 2px solid rgba(0, 0, 255);
+  border-radius: 10px;
+  color: white;
+  padding: 15px 30px;
+
+}
+
+.bignews {
+  height: 210px;
+  width: fit-content;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  left: 150px;
+  right: 150px;
+  top: 300px;
+  float: left;
+}
+
+.autoimg {
+  height: 172px;
+  width: 375px;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+  margin: 5px;
+  padding: 15px;
+  border: 2px solid rgba(0, 0, 255);
+  border-radius: 10px;
+}
+
+.autotxt {
+  height: 115px;
+  width: 375px;
+  float: left;
+  margin: 5px;
+  padding: 15px;
+  position: relative;
+  background-color: #1b1b1b;
+  border: 2px solid rgba(0, 0, 255);
+  border-radius: 10px;
+  color: white;
+}
+
+.news {
+  height: 500px;
+  width: 1250px;
+  position: relative;
+  left: 150px;
+  right: 150px;
+  background-color: #1b1b1b;
+  border: 2px solid rgba(0, 0, 255);
+  top: 700px;
+}
+
+.shortnews {
+  height: 120px;
+  width: 1250px;
+  float: left;
+  position: relative;
+  border: 2px solid rgba(0, 0, 255);
+  background-color: #1b1b1b;
+}
+
+.shortimg {
+  height: 120px;
+  width: 250px;
+  position: relative;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #1b1b1b;
+}
+
+.shorttxt {
+  height: 120px;
+  width: 970px;
+  position: relative;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: white;
+  background-color: #1b1b1b;
+}
+
+.plnav {
+  background-color: rgba(0, 0, 255);
+  justify-content: center;
+  padding: 10px;
+  height: fit-content;
+  width: 330px;
+  border-bottom: 2px solid rgba(0, 0, 150);
+  border-bottom-width: 6px;
+}
+
+.plimg {
+  height: 120px;
+  width: 100px;
+  float: left;
+  padding: 5px;
+}
+
+.plname {
+  height: 120px;
+  width: 210px;
+  float: left;
+  padding: 5px 15px;
+}
+
+.plnavgames {
+  height: 130px;
+  width: 350px;
+  border: 1px black solid;
+}
+
+.plgame {
+  height: fit-content;
+  width: 350px;
+  background-color: white;
+  position: absolute;
+  top: 290px;
+  left: 1100px;
+}
+
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 250, 0.4);
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  top: 120px;
+  left: 278px;
+  border-radius: 4px;
+  border-bottom: 2px solid rgba(0, 0, 250, 0.3);
+  border-bottom-width: 6px;
+}
+
+#list li {
+  margin-left: 25px;
+  margin-right: 27px;
+  padding: 10px;
+  list-style: inside none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  transition: 0.7s;
+  border-radius: 4px;
+}
+
+#list li:hover {
+  background-color: rgba(0, 0, 250, 0.8);
+  box-shadow: 0 0 10px 10px #48abe0, 0 0 25px 10px #2f2ce2;
+}
+
+#list {
+  display: flex;
+}
+
+#title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  font-style: normal;
+  color: rgb(0, 0, 255);
+  position: absolute;
+  top: 280px;
+  left: 277px;
+}
+
+#title2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  font-style: normal;
+  position: absolute;
+  top: 325px;
+  left: 277px;
+}
+
+#title3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 380px;
+  left: 277px;
+}
+
+.title {
+  margin: 10px 250px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.section {
+  width: 1536px;
+  height: 600px;
+}
+
+#search {
+  position: absolute;
+  left: 277px;
+  top: 680px;
+  width: 700px;
+  height: 38px;
+  padding: 15px;
+}
+
+input {
+  border-radius: 10px;
+  border: none;
+}
+
+.container {
+  /*width: 1300px;
+  height: 1000px;
+  position: absolute;
+  top: 1380px;*/
+  padding-left: 230px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 230px;
+  width: 190px;
+  margin: 15px 15px;
+  background-color: red;
+  transition: 0.7s;
+}
+
+.cart {
+  height: 20px;
+  width: 190px;
+  margin: 15px 15px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+
+.slide {
+  width: 650px;
+  height: 366px;
+  position: absolute;
+  top: 750px;
+  left: 277px;
+  border-radius: 10px;
+  background: url("slide1.jpg");
+  background-size: contain;
+  transition: 6s ease-in-out;
+  animation-name: slide;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  20% {
+    width: 650px;
+    height: 366px;
+    background: url("slide2.jpg");
+  }
+
+  40% {
+    width: 650px;
+    height: 366px;
+    background: url("slide3.jpg");
+  }
+
+  60% {
+    width: 650px;
+    height: 366px;
+    background: url("slide4.jpg");
+  }
+
+  80% {
+    width: 650px;
+    height: 366px;
+    background: url("slide5.jpg");
+  }
+
+  100% {
+    width: 650px;
+    height: 366px;
+    background: url("slide6.jpg");
+  }
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  width: 300px;
+  height: 366px;
+  position: absolute;
+  border-radius: 10px;
+  top: 750px;
+  right: 275px;
+  overflow: scroll;
+}
+
+.in {
+  margin: 3px 0px;
+  width: 298px;
+  height: 80px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 50px;
+  transition: 2s;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  font-style: normal;
+}
+
+#title4 {
+  position: absolute;
+  /*top: 1300px;*/
+  left: 250px;
+  margin: -40px 0px;
+}
+
+.container .box:hover,
+.scroll .in:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 0 10px 10px #48abe0, 0 0 25px 10px #2f2ce2;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 10px #48abe0, 0 0 25px 10px #2f2ce2;
+  transition: 0.7s;
+}
+
+.button a {
+  text-decoration-line: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.box:hover>.box:not(:hover),
+.in:hover>.in:not(:hover) {
+  transform: scale(0.9, 0.9);
+}
+
+footer {
+  padding: 60px;
+  z-index: 1;
+  background-color: #1b1b1b;
+  height: auto;
+}
+
+.media abbr {
+  margin: 0px 7px;
+}
+
+.ft {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: grey;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+ul {
+  float: left;
+}
+
+.last {
+  display: flex;
+  flex-wrap: warp;
+}
+
+.fl {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.fl ul li {
+  list-style: none inside;
+  margin-right: 20px;
+}
+
+.fl ul li:hover {
+  color: #48abe0;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.rights {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: white;
+  margin-top: 40px;
+}
+
+.last div {
+  margin-right: 20px;
+}
+
+#h1:hover {
+  background: url("rdr.webp") no-repeat;
+  background-size: cover;
+}
+
+#h2:hover {
+  background: url("images.jpeg") no-repeat;
+  background-size: cover;
+}
+
+#h3:hover {
+  background: url("download.jpeg") no-repeat;
+  background-size: cover;
+}
+
+#h4:hover {
+  background: url("Forza-Horizon-5.jpg") no-repeat;
+  background-size: cover;
+}
+
+#h5:hover {
+  background: url("far\ cry.jpeg") no-repeat;
+  background-size: cover;
+}
+
+#h6:hover {
+  background: url("cricket.webp") no-repeat;
+  background-size: cover;
+}
+
+.last div:hover {
+  color: white;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.media a:hover {
+  opacity: 0.6;
+}
+
+.button {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.menutext {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#gta5,
+#valorant,
+#ea,
+#rdr2,
+#btd6,
+#amongus {
+  background-color: transparent;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.a {
+  position: absolute;
+  left: 0px;
+  bottom: -2200px;
+  width: 100%;
+  height: auto;
+}

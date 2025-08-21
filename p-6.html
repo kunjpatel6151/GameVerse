@@ -1,0 +1,263 @@
+<!DOCTYPE html <html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Among Us</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#GTA5").mouseenter(function () {
+        $("#gta5").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#GTA5").mouseleave(function () {
+        $("#gta5").css({"background-color": "white", "color": "black"});
+      });
+      $("#VALORANT").mouseenter(function () {
+        $("#valorant").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#VALORANT").mouseleave(function () {
+        $("#valorant").css({"background-color": "white", "color": "black"});
+      });
+      $("#EA").mouseenter(function () {
+        $("#ea").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#EA").mouseleave(function () {
+        $("#ea").css({"background-color": "white", "color": "black"});
+      });
+      $("#RDR2").mouseenter(function () {
+        $("#rdr2").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#RDR2").mouseleave(function () {
+        $("#rdr2").css({"background-color": "white", "color": "black"});
+      });
+      $("#BTD6").mouseenter(function () {
+        $("#btd6").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#btd6").mouseleave(function () {
+        $("#btd6").css({"background-color": "white", "color": "black"});
+      });
+      $("#AMONGUS").mouseenter(function () {
+        $("#amongus").css({"background-color": " rgba(0, 0, 255)", "color": "white"});
+      });
+      $("#AMONGUS").mouseleave(function () {
+        $("#amongus").css({"background-color": "white", "color": "black"});
+      });
+      $('#add-to-cart-button').on('click', function () {
+        addToCart();
+      });
+      function addToCart() {
+        var productName = 'Among Us';
+        var productPrice = 100.00;
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        var existingProduct = cart.find(item => item.name === productName);
+        if (existingProduct) {
+          existingProduct.quantity++;
+        } else {
+          var newProduct = {
+            name: productName,
+            price: productPrice,
+            quantity: 1
+          };
+          cart.push(newProduct);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart!');
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="background2">
+    <div class="navbar">
+      <ul id="list">
+        <li><a href="index.html" class="menutext"> Home </a></li>
+        <li><a href="categories.html" class="menutext"> Categories </a></li>
+        <li><a href="cart.html" class="menutext"> Cart </a></li>
+        <li><a href="login.html" class="menutext"> Login </a></li>
+        <li><a href="news.html" class="menutext">Latest News</a></li>
+        <li><a href="help.html" class="menutext"> Help </a></li>
+        <li><a href="about.html" class="menutext"> About us </a></li>
+      </ul>
+    </div>
+    <div class="sologame">
+      <h1><b>Among Us</b></h1>
+      <hr>
+      <p><br>Among Us was released on Nov 16, 2018<br></p>
+      <h2 class="textcenter"><b>About The Game</b></h2>
+      <p><br>Play with 4-10 player online or via local WiFi as you attempt to prepare your spaceship for departure, but
+        beware as one or more random players among the Crew are Impostors bent on killing everyone! Originally created
+        as a party game, we recommend playing with friends at a LAN party or online using voice chat. Enjoy
+        cross-platform play between Android, iOS and PC.<br>
+        <br>
+      <h3><b>Game Features:</b></h3>
+      <br>
+      <ul>
+        <li>Win by completing tasks to prepare the ship or ejecting all Impostors.</li>
+        <li>React quickly to undo the Impostor’s sabotages.</li>
+        <li>Check the Admin map and Security cameras to keep tabs on other Crewmates.</li>
+        <li>Report any dead bodies immediately to start discussion of who the suspected Impostor is.</li>
+        <li>Call emergency meetings to discuss suspicious behavior.</li>
+        <li>Vote to eject suspected Impostors.</li>
+        <li>Kill crewmates and frame bystanders.</li>
+        <li>Pretend to run tasks to blend in with the crewmates.</li>
+        <li>Sneak through the vents to quickly move about the ship.</li>
+        <li>Use sabotages to cause chaos and divide the crew.</li>
+        <li>Close doors to trap victims and kill in private.</li>
+      </ul><br><br></p>
+      <img src="pp-6.jpg" alt="Among Us" class="imgcenter">
+      <br>
+      <div class="textcenter" <p>
+        <h2>Rs.100 only</h2><button id="add-to-cart-button" style="background-color: black; color: white; padding:5px;">
+          Add to Cart </button></p>
+      </div>
+      <br>
+      <br>
+      <h2 class="textcenter"><b>System Requirements</b></h2>
+      <ul>
+        <li><b>OS:</b> Windows 7 SP1+</li>
+        <li><b>Processor:</b> SSE2 instruction set support</li>
+        <li><b>Memory:</b> 1 GB RAM</li>
+        <li><b>Graphics:</b> Version 10</li>
+        <li><b>Storage:</b> 250 MB available space</li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2 class="textcenter"><b>Screenshots</b></h2>
+      <br>
+      <img src="ps-6.jpg" alt="Among Us" class="imgcenter">
+      <br>
+      <img src="pss-6.jpg" alt="Among Us" class="imgcenter">
+      <br>
+    </div>
+    <div class="plgame">
+      <div class="plnav">
+        <h3 style="color:white;">POPULAR GAMES</h3>
+      </div>
+      <a href="p-1.html">
+        <div class="plnavgames" id="GTA5">
+          <div class="plimg" style="background-image: url(p-1.jpg);background-size: 100%;"></div>
+          <div class="plname" id="gta5">
+            <h3 class="textcenter"><br><br><b>Grand Theft Auto V</b></h3>
+          </div>
+        </div>
+      </a>
+      <a href="p-2.html">
+        <div class="plnavgames" id="VALORANT">
+          <div class="plimg" style="background-image: url(p-2.jpg);background-size: 100%;"></div>
+          <div class="plname" id="valorant">
+            <h3 class="textcenter"><br><br><b>VALORANT</b></h3>
+          </div>
+        </div>
+      </a>
+      <a href="p-3.html">
+        <div class="plnavgames" id="EA">
+          <div class="plimg" style="background-image: url(p-3.jpg);background-size: 100%;"></div>
+          <div class="plname" id="ea">
+            <h3 class="textcenter"><br><br><b>EA SPORTS FC™ 24</b></h3>
+          </div>
+        </div>
+      </a>
+      <a href="p-4.html">
+        <div class="plnavgames" id="RDR2">
+          <div class="plimg" style="background-image: url(p-4.jpg);background-size: 100%;"></div>
+          <div class="plname" id="rdr2">
+            <h3 class="textcenter"><br><br><b>Red Dead Redemption 2</b></h3>
+          </div>
+        </div>
+      </a>
+      <a href="p-5.html">
+        <div class="plnavgames" id="BTD6">
+          <div class="plimg" style="background-image: url(p-5.jpg);background-size: 100%;"></div>
+          <div class="plname" id="btd6">
+            <h3 class="textcenter"><br><br><b>Bloons TD 6</b></h3>
+          </div>
+        </div>
+      </a>
+      <a href="p-6.html">
+        <div class="plnavgames" id="AMONGUS">
+          <div class="plimg" style="background-image: url(p-6.jpg);background-size: 100%;"></div>
+          <div class="plname" id="amongus">
+            <h3 class="textcenter"><br><br><b>Among Us</b></h3>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="a">
+      <footer>
+        <div class="media">
+          <abbr title="x"><a href="https://twitter.com/?lang=en" target="_blank"><img src="facebook.png" height="25px"
+                width="25px"></a></abbr>
+          <abbr title="facebook"><a href="https://www.facebook.com/" target="_blank"><img src="instagram.png"
+                height="25px" width="25px"></a></abbr>
+          <abbr title="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="twitterx.png"
+                height="25px" width="25px"></a></abbr>
+          <abbr title="youtube"><a href="https://www.youtube.com/" target="_blank"><img src="youtube.png" height="25px"
+                width="25px"></a></abbr>
+        </div>
+        <div class="foot">
+          <div class="ft">
+            <p>Resources</p>
+          </div>
+          <div class="fl">
+            <ul>
+              <li>Support-A-Creator</li>
+              <li>Distrubute on GameVerse</li>
+              <li>Careers</li>
+              <li>Company</li>
+            </ul>
+            <ul>
+              <li>Fan Art Policy</li>
+              <li>UX Research</li>
+              <li>Store EULA</li>
+            </ul>
+            <ul>
+              <li>Online Services</li>
+              <li>Community Rules</li>
+              <li>GameVerse newsroom</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div class="rights">&copy; GameVerse, Inc. All rights reserved.GameVerse Games,GameVerse logo are trademarks
+          or
+          registered trademarks of GameVerse, Inc. in the INDIA and elsewhere. Other brands or product names are the
+          trademarks of their respective owners.
+          Our websites may contain links to other sites and resources provided by third parties. These links are
+          provided
+          for your convenience only. GameVerse has no control over the contents of those sites or resources, and
+          accepts
+          no
+          responsibility for them or for any loss or damage that may arise from your use of them.</div>
+        <div class="ft last">
+          <div>Terms of Service</div>
+          <div>Privacy Policy</div>
+          <div>Store Refund Policy</div>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>

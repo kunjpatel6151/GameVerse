@@ -1,0 +1,154 @@
+<!DOCTYPE html <html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cart</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    #checkout-button a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      displayCart();
+
+      function displayCart() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var cartContainer = $('#cart-container');
+
+        cartContainer.empty();
+
+        if (cart.length > 0) {
+          cart.forEach(function (product) {
+            var productHTML = '<div class="product">\
+                          <h2>' + product.name + '</h2>\
+                          <p class="product-price">RS.' + (product.price * product.quantity).toFixed(2) + '</p>\
+                          <p class="quantity-input">' + product.quantity + '</p>\
+                          <span class="remove-button" onclick="removeProduct(\'' + product.name + '\')">&#xf2ed; Remove</span>\
+                      </div>';
+            cartContainer.append(productHTML);
+          });
+        } else {
+          cartContainer.append('<p>Your cart is empty.</p>');
+        }
+
+        updateTotal();
+      }
+
+      function updateTotal() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var total = 0;
+
+        cart.forEach(function (product) {
+          total += product.price * product.quantity;
+        });
+
+        $('#total h3').text('Total: RS.' + total.toFixed(2));
+      }
+
+      window.removeProduct = function (productName) {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        var updatedCart = cart.filter(item => item.name !== productName);
+
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        displayCart();
+      };
+    });
+  </script>
+</head>
+
+<body>
+  <div class="background2">
+    <div class="navbar">
+      <ul id="list">
+        <li><a href="index.html" class="menutext"> Home </a></li>
+        <li><a href="categories.html" class="menutext"> Categories </a></li>
+        <li><a href="cart.html" class="menutext"> Cart </a></li>
+        <li><a href="login.html" class="menutext"> Login </a></li>
+        <li><a href="news.html" class="menutext">Latest News</a></li>
+        <li><a href="help.html" class="menutext"> Help </a></li>
+        <li><a href="about.html" class="menutext"> About us </a></li>
+      </ul>
+    </div>
+    <div id="cart-container"></div>
+    <div id="total">
+      <h3 style="color: white;position: relative;top: 340px;left: 40px;">Total: RS.0.00</h3>
+    </div>
+    <button id="checkout-button"><a href="submit.html">Proceed to
+        Checkout</a></button>
+    <div class="a" style="bottom: -1400px;">
+      <footer>
+        <div class="media">
+          <abbr title="x"><a href="https://twitter.com/?lang=en" target="_blank"><img src="facebook.png" height="25px"
+                width="25px"></a></abbr>
+          <abbr title="facebook"><a href="https://www.facebook.com/" target="_blank"><img src="instagram.png"
+                height="25px" width="25px"></a></abbr>
+          <abbr title="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="twitterx.png"
+                height="25px" width="25px"></a></abbr>
+          <abbr title="youtube"><a href="https://www.youtube.com/" target="_blank"><img src="youtube.png" height="25px"
+                width="25px"></a></abbr>
+        </div>
+        <div class="foot">
+          <div class="ft">
+            <p>Resources</p>
+          </div>
+          <div class="fl">
+            <ul>
+              <li>Support-A-Creator</li>
+              <li>Distrubute on GameVerse</li>
+              <li>Careers</li>
+              <li>Company</li>
+            </ul>
+            <ul>
+              <li>Fan Art Policy</li>
+              <li>UX Research</li>
+              <li>Store EULA</li>
+            </ul>
+            <ul>
+              <li>Online Services</li>
+              <li>Community Rules</li>
+              <li>GameVerse newsroom</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div class="rights">&copy; GameVerse, Inc. All rights reserved.GameVerse Games,GameVerse logo are trademarks
+          or
+          registered trademarks of GameVerse, Inc. in the INDIA and elsewhere. Other brands or product names are the
+          trademarks of their respective owners.
+          Our websites may contain links to other sites and resources provided by third parties. These links are
+          provided
+          for your convenience only. GameVerse has no control over the contents of those sites or resources, and
+          accepts
+          no
+          responsibility for them or for any loss or damage that may arise from your use of them.</div>
+        <div class="ft last">
+          <div>Terms of Service</div>
+          <div>Privacy Policy</div>
+          <div>Store Refund Policy</div>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>
