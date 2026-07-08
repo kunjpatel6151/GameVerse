@@ -5,7 +5,6 @@ GameVerse is a modern front-end e-commerce website designed for gaming enthusias
 ## 🚀 Live Demo
 
 Visit the live website:
-
 **https://kunjpatel6151.github.io/GameVerse/**
 
 ## 📌 Features
